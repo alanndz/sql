@@ -15,6 +15,8 @@ _sql(){
     mysql -u root -p < "${1}"
 }
 
+[[ -z $(ls ${mysql}/*.sql 2> /dev/null) ]] && prin "Empty *.sql file, exited" && exit 1
+
 prin "Daftar sql"
 
 for i in ${mysql}/*.sql
