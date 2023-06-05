@@ -33,7 +33,7 @@ do
         run_all)
             for i in ${sql[@]}
             do
-                #prin "${mysql}/${i}"
+                prin "Running ${mysql}/${i}"
                 _sql "${mysql}/${i}"
                 sleep 1
             done
